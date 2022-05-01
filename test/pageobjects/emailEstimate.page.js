@@ -1,6 +1,6 @@
 const CalculatorPage = require("./calculator.page");
 
-class EmailEstimate extends CalculatorPage {
+class EmailEstimatePage extends CalculatorPage {
   get emailEstimateButton() {
     return $('//button[@id="email_quote"]');
   }
@@ -32,4 +32,4 @@ class EmailEstimate extends CalculatorPage {
   }
 }
 
-module.exports = EmailEstimate;
+module.exports = EmailEstimatePage;

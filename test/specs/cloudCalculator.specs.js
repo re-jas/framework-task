@@ -3,13 +3,13 @@
 const SearchPage = require("../pageobjects/search.page");
 const CalculatorPage = require("../pageobjects/calculator.page");
 const TempMailoPage = require("../pageobjects/tempMailo.page");
-const EmailEstimate = require("../pageobjects/emailEstimate.page");
+const EmailEstimatePage = require("../pageobjects/emailEstimate.page");
 const Machine = require("../model/machine");
 
 const searchPage = new SearchPage();
 const calculatorPage = new CalculatorPage();
 const tempMailoPage = new TempMailoPage();
-const emailEstimate = new EmailEstimate();
+const emailEstimatepage = new EmailEstimatePage();
 const machine = new Machine();
 
 describe("Find out cost of Google Cloud", () => {
@@ -60,6 +60,6 @@ describe("Find out cost of Google Cloud", () => {
 
   it("Send the email", async () => {
     let mailCost = await tempMailoPage.receiveMessage();
-    await expect(emailEstimate.getFinalCost()).toHaveTextContaining(mailCost);
+    await expect(emailEstimatepage.getFinalCost()).toHaveTextContaining(mailCost);
   });
 });
