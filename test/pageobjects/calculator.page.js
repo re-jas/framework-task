@@ -3,39 +3,39 @@ const Page = require("./page");
 class CalculatorPage extends Page {
   // Instances
   get instances() {
-    return $("#input_81");
+    return $("#input_82");
   }
   // Operating System
   get os() {
-    return $("#select_94");
+    return $("#select_95");
   }
 
   get osOption() {
-    return $("#select_option_83");
+    return $("#select_option_84");
   }
   // Machine Class
   get machineClass() {
-    return $("#select_98");
+    return $("#select_99");
   }
 
   get machineClassOption() {
-    return $("#select_option_96");
+    return $("#select_option_97");
   }
   // Series
   get series() {
-    return $("#select_106");
+    return $("#select_107");
   }
 
   get seriesOption() {
-    return $("#select_option_221");
+    return $("#select_option_222");
   }
   // Machine Type
   get machine() {
-    return $("#select_108");
+    return $("#select_109");
   }
 
   get machineOption() {
-    return $("#select_option_427");
+    return $("#select_option_431");
   }
   // Add GPUs
   get addGpus() {
@@ -43,43 +43,43 @@ class CalculatorPage extends Page {
   }
   // GPY type
   get gpuSelect() {
-    return $("#select_460");
+    return $("#select_464");
   }
 
   get gpuOption() {
-    return $("#select_option_467");
+    return $("#select_option_471");
   }
   // Number of GPUs
   get numOfGpu() {
-    return $("#select_462");
+    return $("#select_466");
   }
 
   get numOfGpuOption() {
-    return $("#select_option_471");
+    return $("#select_option_475");
   }
   // Local SSD
   get localSsd() {
-    return $("#select_422");
+    return $("#select_426");
   }
 
   get localSsdOption() {
-    return $("#select_option_448");
+    return $("#select_option_452");
   }
   // Datacenter location
   get dataCenter() {
-    return $("#select_114");
+    return $("#select_115");
   }
 
   get dataCenterOption() {
-    return $("#select_option_233");
+    return $("#select_option_234");
   }
   // Committed usage
   get commitedUage() {
-    return $("#select_121");
+    return $("#select_122");
   }
 
   get commitedUageOption() {
-    return $("#select_option_119");
+    return $("#select_option_120");
   }
   // Button
   get addToEstimate() {

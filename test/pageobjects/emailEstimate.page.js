@@ -19,6 +19,7 @@ class EmailEstimatePage extends CalculatorPage {
     await browser.switchToFrame(0);
     await browser.switchToFrame(0);
     await this.emailEstimateButton.click();
+    await this.emailAddress.click();
     await this.emailAddress.setValue(["Shift", "Insert"]);
     await this.emailSendButton.waitForClickable();
     await this.emailSendButton.click();

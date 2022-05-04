@@ -1,8 +1,6 @@
-// npx wdio --spec ./test\specs\pastebin.specs.js -b chrome --ls eager
-
 const PastebinPage = require("../pageobjects/pastebin.page");
 const NewCreatedPastePage = require("../pageobjects/createdPaste.page");
-const Paste = require("../model/paste");
+const Paste = require("../../model/paste");
 
 const pastebinPage = new PastebinPage();
 const newCreatedPastePage = new NewCreatedPastePage();

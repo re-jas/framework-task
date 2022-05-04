@@ -1,8 +1,16 @@
 const EmailEstimate = require("./emailEstimate.page");
 
 class TempMailoPage extends EmailEstimate {
+  get switchFullmessageFrame() {
+    return $('//*[@id="fullmessage"]');
+  }
+
   get copyAddress() {
     return $(".iconx");
+  }
+
+  get emailText() {
+    return $("#i-email");
   }
 
   get refresh() {
@@ -16,7 +24,7 @@ class TempMailoPage extends EmailEstimate {
   }
 
   get totalCost() {
-    return $('//tbody//h3[contains(text(), "USD")]');
+    return $('//tr[@id="mobilepadding"]//td/h2');
   }
 
   openMail() {
@@ -35,9 +43,9 @@ class TempMailoPage extends EmailEstimate {
     await this.refresh.click();
     await this.newMessage.waitForExist({ timeout: 20000 });
     await this.newMessage.click();
-    await browser.switchToFrame(1);
+    await browser.switchToFrame(await this.switchFullmessageFrame);
     let cost = await this.totalCost.getText();
-    return cost;
+    return cost.replace("Estimated Monthly Cost: ", "");
   }
 }
 

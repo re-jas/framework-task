@@ -4,7 +4,7 @@ const SearchPage = require("../pageobjects/search.page");
 const CalculatorPage = require("../pageobjects/calculator.page");
 const TempMailoPage = require("../pageobjects/tempMailo.page");
 const EmailEstimatePage = require("../pageobjects/emailEstimate.page");
-const Machine = require("../model/machine");
+const Machine = require("../../model/machine");
 
 const searchPage = new SearchPage();
 const calculatorPage = new CalculatorPage();
